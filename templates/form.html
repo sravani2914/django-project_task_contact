@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hero Form</title>
+</head>
+<body>
+
+<h2>Hero Details Form</h2>
+
+<form action="{% url 'contact' %}" method="POST">
+    {% csrf_token %}
+
+    <label>Hero Name:</label><br>
+    <input type="text" name="hero_name"><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" name="age"><br><br>
+
+    <label>Movies:</label><br>
+    <input type="text" name="movies"><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob"><br><br>
+
+    <label>No of Movies:</label><br>
+    <input type="number" name="no_of_movies"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<br>
+<a href="{% url 'about' %}">Go to About Page</a>
+
+</body>
+</html>
